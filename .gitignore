@@ -1,0 +1,11 @@
+# Ignore large data and model files
+data/
+checkpoints/
+*.parquet
+*.memmap
+*.zip
+__pycache__/
+.DS_Store
+*.pth
+tmp_eval_fast/
+all_results/*.parquet

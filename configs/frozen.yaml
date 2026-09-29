@@ -1,0 +1,121 @@
+# ============================================================================
+# PerconAI — Frozen Configuration
+# ============================================================================
+# ALL research knobs are PRE-REGISTERED and FROZEN.
+# Do NOT modify this file after Day 1 checkpoint is passed.
+# Any modification invalidates all downstream checkpoints.
+# ============================================================================
+
+# ---------------------------------------------------------------------------
+# Stream / Tick Parameters
+# ---------------------------------------------------------------------------
+stream:
+  D: 32          # windows per tick
+  H: 64          # oracle horizon (windows)
+  W: 64          # ring-buffer size (windows)
+
+# ---------------------------------------------------------------------------
+# Action Parameters
+# ---------------------------------------------------------------------------
+actions:
+  k: 2           # TENT gradient steps per tick
+  B: 8           # TENT entropy-buffer windows
+  N: 256         # EM-PRIOR accumulation windows
+  m: 0.5         # BN-RECAL momentum (exponential moving average)
+
+# ---------------------------------------------------------------------------
+# Utility Grid
+# ---------------------------------------------------------------------------
+utility:
+  lambda_grid:
+    - 0
+    - 0.125
+    - 0.25
+    - 0.5
+    - 1
+    - 2
+    - 4
+    - .inf          # YAML 1.1 infinity literal
+
+# ---------------------------------------------------------------------------
+# Binning Thresholds (percentage-point change in accuracy)
+# ---------------------------------------------------------------------------
+binning:
+  harm_threshold: -0.5   # pp — below this ⇒ "harmful"
+  help_threshold:  0.5   # pp — above this ⇒ "helpful"
+
+# ---------------------------------------------------------------------------
+# Device Profiles
+# ---------------------------------------------------------------------------
+device_profiles:
+  P1:
+    name: "Cortex-M4F"
+    dtype: "fp32"
+    sram_kb: 2048        # 2 MB
+  P2:
+    name: "Cortex-M7"
+    dtype: "int8-PTQ"
+    sram_kb: 512
+  P3:
+    name: "Cortex-M4"
+    dtype: "int8-PTQ"
+    sram_kb: 256
+  P4:
+    name: "RPi Zero 2 W (proxy)"
+    dtype: "fp32"
+    sram_kb: null        # unconstrained proxy
+
+# ---------------------------------------------------------------------------
+# Reproducibility
+# ---------------------------------------------------------------------------
+random_seed: 42
+
+# ---------------------------------------------------------------------------
+# Training Hyper-parameters (frozen)
+# ---------------------------------------------------------------------------
+training:
+  optimizer: "AdamW"
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  scheduler: "CosineAnnealingLR"
+  epochs: 60
+  batch_size: 64
+  early_stopping_patience: 10
+  monitor_metric: "source_val_loss"
+
+# ---------------------------------------------------------------------------
+# Model Architecture (TinyHAR-Net)
+# ---------------------------------------------------------------------------
+model:
+  name: "TinyHAR-Net"
+  window_length: 128
+  conv_channels: [32, 64, 64, 64]
+  kernel_size: 5
+  gap_output_size: 16
+  fc_hidden: 64
+  max_params: 150000
+
+# ---------------------------------------------------------------------------
+# Preprocessing
+# ---------------------------------------------------------------------------
+preprocessing:
+  target_sample_rate_hz: 50
+  window_length: 128
+  window_stride: 64          # 50% overlap
+  pamap2_drop_classes: [0, 9, 10, 11, 12, 13, 14, 15, 16]
+
+# ---------------------------------------------------------------------------
+# Memory Guards
+# ---------------------------------------------------------------------------
+memory:
+  max_rss_gb: 28.0
+  buffer_gb: 0.5
+
+# ---------------------------------------------------------------------------
+# Dataset Paths (relative to project root)
+# ---------------------------------------------------------------------------
+paths:
+  raw: "data/raw"
+  processed: "data/processed"
+  memmap: "data/memmap"
+  checkpoints: "checkpoints"

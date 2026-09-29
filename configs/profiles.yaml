@@ -1,0 +1,31 @@
+P1:
+  name: "Cortex-M4F"
+  clock_mhz: 168
+  dtype: "fp32"
+  sram_kb: 2048
+  energy_per_mac_mj: 20.0e-6  # Horowitz 45nm scaled for MCU overhead
+  sensitivity_multiplier: 1.0
+
+P2:
+  name: "Cortex-M7"
+  clock_mhz: 480
+  dtype: "int8-PTQ"
+  sram_kb: 512
+  energy_per_mac_mj: 2.5e-6
+  sensitivity_multiplier: 1.0
+
+P3:
+  name: "Cortex-M4"
+  clock_mhz: 80
+  dtype: "int8-PTQ"
+  sram_kb: 256
+  energy_per_mac_mj: 1.5e-6
+  sensitivity_multiplier: 1.0
+
+P4:
+  name: "RPi Zero 2 W"
+  clock_mhz: 1000
+  dtype: "fp32"
+  sram_kb: 524288
+  energy_per_mac_mj: 150.0e-6
+  sensitivity_multiplier: 1.0

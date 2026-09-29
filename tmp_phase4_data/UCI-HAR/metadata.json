@@ -1,0 +1,185 @@
+{
+  "dataset": "UCI-HAR",
+  "subjects": [
+    {
+      "id": 1,
+      "x_path": "subj_1_X.memmap",
+      "y_path": "subj_1_y.memmap",
+      "windows": 347
+    },
+    {
+      "id": 2,
+      "x_path": "subj_2_X.memmap",
+      "y_path": "subj_2_y.memmap",
+      "windows": 302
+    },
+    {
+      "id": 3,
+      "x_path": "subj_3_X.memmap",
+      "y_path": "subj_3_y.memmap",
+      "windows": 341
+    },
+    {
+      "id": 4,
+      "x_path": "subj_4_X.memmap",
+      "y_path": "subj_4_y.memmap",
+      "windows": 317
+    },
+    {
+      "id": 5,
+      "x_path": "subj_5_X.memmap",
+      "y_path": "subj_5_y.memmap",
+      "windows": 302
+    },
+    {
+      "id": 6,
+      "x_path": "subj_6_X.memmap",
+      "y_path": "subj_6_y.memmap",
+      "windows": 325
+    },
+    {
+      "id": 7,
+      "x_path": "subj_7_X.memmap",
+      "y_path": "subj_7_y.memmap",
+      "windows": 308
+    },
+    {
+      "id": 8,
+      "x_path": "subj_8_X.memmap",
+      "y_path": "subj_8_y.memmap",
+      "windows": 281
+    },
+    {
+      "id": 9,
+      "x_path": "subj_9_X.memmap",
+      "y_path": "subj_9_y.memmap",
+      "windows": 288
+    },
+    {
+      "id": 10,
+      "x_path": "subj_10_X.memmap",
+      "y_path": "subj_10_y.memmap",
+      "windows": 294
+    },
+    {
+      "id": 11,
+      "x_path": "subj_11_X.memmap",
+      "y_path": "subj_11_y.memmap",
+      "windows": 316
+    },
+    {
+      "id": 12,
+      "x_path": "subj_12_X.memmap",
+      "y_path": "subj_12_y.memmap",
+      "windows": 320
+    },
+    {
+      "id": 13,
+      "x_path": "subj_13_X.memmap",
+      "y_path": "subj_13_y.memmap",
+      "windows": 327
+    },
+    {
+      "id": 14,
+      "x_path": "subj_14_X.memmap",
+      "y_path": "subj_14_y.memmap",
+      "windows": 323
+    },
+    {
+      "id": 15,
+      "x_path": "subj_15_X.memmap",
+      "y_path": "subj_15_y.memmap",
+      "windows": 328
+    },
+    {
+      "id": 16,
+      "x_path": "subj_16_X.memmap",
+      "y_path": "subj_16_y.memmap",
+      "windows": 366
+    },
+    {
+      "id": 17,
+      "x_path": "subj_17_X.memmap",
+      "y_path": "subj_17_y.memmap",
+      "windows": 368
+    },
+    {
+      "id": 18,
+      "x_path": "subj_18_X.memmap",
+      "y_path": "subj_18_y.memmap",
+      "windows": 364
+    },
+    {
+      "id": 19,
+      "x_path": "subj_19_X.memmap",
+      "y_path": "subj_19_y.memmap",
+      "windows": 360
+    },
+    {
+      "id": 20,
+      "x_path": "subj_20_X.memmap",
+      "y_path": "subj_20_y.memmap",
+      "windows": 354
+    },
+    {
+      "id": 21,
+      "x_path": "subj_21_X.memmap",
+      "y_path": "subj_21_y.memmap",
+      "windows": 408
+    },
+    {
+      "id": 22,
+      "x_path": "subj_22_X.memmap",
+      "y_path": "subj_22_y.memmap",
+      "windows": 321
+    },
+    {
+      "id": 23,
+      "x_path": "subj_23_X.memmap",
+      "y_path": "subj_23_y.memmap",
+      "windows": 372
+    },
+    {
+      "id": 24,
+      "x_path": "subj_24_X.memmap",
+      "y_path": "subj_24_y.memmap",
+      "windows": 381
+    },
+    {
+      "id": 25,
+      "x_path": "subj_25_X.memmap",
+      "y_path": "subj_25_y.memmap",
+      "windows": 409
+    },
+    {
+      "id": 26,
+      "x_path": "subj_26_X.memmap",
+      "y_path": "subj_26_y.memmap",
+      "windows": 392
+    },
+    {
+      "id": 27,
+      "x_path": "subj_27_X.memmap",
+      "y_path": "subj_27_y.memmap",
+      "windows": 376
+    },
+    {
+      "id": 28,
+      "x_path": "subj_28_X.memmap",
+      "y_path": "subj_28_y.memmap",
+      "windows": 382
+    },
+    {
+      "id": 29,
+      "x_path": "subj_29_X.memmap",
+      "y_path": "subj_29_y.memmap",
+      "windows": 344
+    },
+    {
+      "id": 30,
+      "x_path": "subj_30_X.memmap",
+      "y_path": "subj_30_y.memmap",
+      "windows": 383
+    }
+  ]
+}
